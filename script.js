@@ -9,7 +9,7 @@ function getPlayerChoice() {
     return gesture.toLowerCase();
 }
 
-function round() {
+function playRound() {
     let compGest = getComputerChoice();
     console.log(compGest);
     let playerGest = getPlayerChoice();
@@ -27,7 +27,8 @@ function game() {
     let win = 0;
     let loss = 0;
     for (let i = 0; i < 5; i++) {
-        let roundResult = round();
+        let roundResult = playRound();
+        console.log(roundResult);
         if (roundResult[4] == "w") {++win;}
         else if (roundResult[4] == "l") {++loss;}
     }
